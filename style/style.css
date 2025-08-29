@@ -1,48 +1,107 @@
-:root{
-    --main-bg-color: #4A4A4A;
-    --primary-color: #002699;
-    --secondary-color: #E8E8E8;
-    --letter-color: rgb(255, 255, 255, 0.55);
+:root {
+    --main-bg-color: #0f172a;
+    --primary-color: #06B6D4;
+    --secondary-color: #EAEAEA;
+    --secondary-bg-color: #1E293B;
+    --letter-color: #F1F5F9;
 }
-body{
+
+body {
     background-color: var(--main-bg-color) !important;
     color: var(--secondary-color);
     font-family: "Sansation", sans-serif;
 }
 
-.menu-options{
+.menu-options {
     list-style-type: none;
     cursor: pointer;
 }
 
-.about-me{
+
+.navbar-customization{
+    background-color: var(--secondary-bg-color);
+    
+}
+
+/* Personalização do botão toggle (menu hambúrguer) */
+.navbar-toggler {
+    border: 2px solid var(--primary-color) !important;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Personalização das barrinhas do hambúrguer */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2306B6D4' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+/* Hover effect para o toggle button */
+.navbar-toggler:hover {
+    border-color: var(--letter-color) !important;
+    background-color: rgba(6, 182, 212, 0.1);
+}
+
+/* Quando o menu está aberto (classe 'collapsed' é removida) */
+.navbar-toggler:not(.collapsed) {
+    border-color: var(--letter-color) !important;
+    background-color: rgba(6, 182, 212, 0.2);
+}
+
+.nav-item a{
+    color: var(--primary-color);
+}
+
+.nav-item a:hover{
+    color: var(--secondary-color);
+}
+
+.section-card {
     display: block;
     width: 90%;
-    background-color: #5C5C5C;
+    background-color: var(--secondary-bg-color) !important;
     height: 30%;
     margin: 20px;
     padding: 2rem;
     border-radius: 5px;
-    box-shadow: -10px 7px 5px #3A3A3A;
+    box-shadow: -10px 7px 5px ;
     font-size: 1.1em;
 }
 
-.pic-profile-and-info{
+.section-title{
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.pic-profile-and-info {
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
+    justify-content:space-between;
     align-items: center;
     color: var(--letter-color);
 }
 
-.pic-profile{
-    width: 40%;
-    height: auto;
+.pic-profile {
+    width: 10em;
+    height: 10em;
     border-radius: 50%;
-    border: 5px solid #002699;
+    border: 5px solid var(--primary-color);
 }
 
-.important-links{
+.info-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: var(--letter-color);
+}
+
+.important-links {
     display: flex;
     flex-direction: column;
 }
@@ -59,6 +118,177 @@ body{
     cursor: pointer;
 }
 
-.resume{
+.resume {
     padding-top: 20px;
+    text-align: justify;
+
+}
+.related-link{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--letter-color);
+}
+
+.related-link:hover{
+    color: var(--primary-color);
+}
+
+.graduation-resume{
+    margin-top: 1em;
+}
+
+.large {
+    padding: 2rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.medium {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.pyramid {
+    position: relative;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid var(--primary-color);
+    position: relative;
+    transform-origin: center;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    background: #4ecdc4;
+    position: relative;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background: #45b7d1;
+    border-radius: 50%;
+    position: relative;
+}
+
+@media (min-width: 767px) {
+    .section-card {
+        margin: 20px 40px;
+    }
+
+    .pic-profile-and-info {
+        flex-direction: row;
+    }
+
+    .pic-profile {
+        width: 25%;
+    }
+    .text-presentation{
+        margin-left: 20px;
+    }
+
+    .info-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: baseline;
+    }
+
+}
+
+@media (min-width: 1023px){
+    .section-card {
+        margin: 20px 50px;
+    }
+
+    .pic-profile-and-info {
+        justify-content:space-evenly;
+    }
+
+    .pic-profile{
+        margin-left: -.5em;
+        width: 12em;
+        height: 12em;
+    }
+
+    .text-presentation{
+        margin-left: 9em;
+        font-size: 1.5em;
+    }
+
+}
+
+@media (min-width: 1439px){
+    .section-card{
+        margin: 20px 75px;
+    }
+
+    .pic-profile{
+        margin-left: -4.5em;
+        width: 15em;
+        height: 15em;
+    }
+
+}
+
+@media (min-width: 1528px){
+    
+    .section-card{
+        margin: 20px 125px;
+    }
+
+    .pic-profile{
+        margin-left: -12.5em;
+        width: 15em;
+        height: 15em;
+    }
+
+}
+
+@media (min-width: 2048px){
+    
+    .section-card{
+        margin: 20px 125px;
+    }
+
+    .pic-profile{
+        margin-left: -20.5em;
+        width: 15em;
+        height: 15em;
+    }
+
+}
+
+@media (min-width: 2559px) {
+        .pic-profile{
+        margin-left: -32.5em;
+        width: 15em;
+        height: 15em;
+    }
+}
+@media (min-width: 3439px){
+    
+    .section-card{
+        margin: 20px 205px;
+    }
+
+    .pic-profile{
+        margin-left: -50.5em;
+        width: 15em;
+        height: 15em;
+    }
+
 }
