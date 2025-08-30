@@ -1,0 +1,39 @@
+/* Estilos da navegação */
+.navbar-customization {
+    background-color: var(--secondary-bg-color);
+}
+
+.navbar-toggler {
+    border: 2px solid var(--primary-color) !important;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2306B6D4' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.navbar-toggler:hover {
+    border-color: var(--letter-color) !important;
+    background-color: rgba(6, 182, 212, 0.1);
+}
+
+.navbar-toggler:not(.collapsed) {
+    border-color: var(--letter-color) !important;
+    background-color: rgba(6, 182, 212, 0.2);
+}
+
+.nav-item a {
+    color: var(--primary-color);
+}
+
+.nav-item a:hover {
+    color: var(--secondary-color);
+}

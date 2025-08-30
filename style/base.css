@@ -1,0 +1,31 @@
+body {
+    background-color: var(--main-bg-color) !important;
+    color: var(--secondary-color);
+    font-family: "Sansation", sans-serif;
+}
+
+.menu-options {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.section-card {
+    display: block;
+    width: 90%;
+    background-color: var(--secondary-bg-color) !important;
+    height: 30%;
+    margin: 20px;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: -10px 7px 5px;
+    font-size: 1.1em;
+}
+
+.section-title {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.btn {
+    background-color: var(--primary-color) !important;
+}

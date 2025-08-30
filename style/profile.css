@@ -1,0 +1,58 @@
+/* Estilos da seção de perfil e sobre */
+.pic-profile-and-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--letter-color);
+}
+
+.pic-profile {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+}
+
+.info-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: var(--letter-color);
+}
+
+.important-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.important-links i {
+    width: 1.1em;
+    height: auto;
+    color: var(--letter-color);
+}
+
+.important-links a {
+    text-decoration: none;
+    color: var(--letter-color);
+    cursor: pointer;
+}
+
+.resume {
+    padding-top: 20px;
+    text-align: justify;
+}
+
+.related-link {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--letter-color);
+}
+
+.related-link:hover {
+    color: var(--primary-color);
+}
+
+.graduation-resume {
+    margin-top: 1em;
+}

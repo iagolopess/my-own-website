@@ -1,0 +1,71 @@
+/* Estilos dos cards de experiência e carrossel */
+.card-img-top {
+    background-color: var(--main-bg-color);
+}
+
+.card-body {
+    background-color: var(--secondary-bg-color);
+    color: var(--letter-color) !important;
+}
+
+.card-body h6 {
+    font-weight: bold;
+}
+
+.card {
+    margin-top: 1em;
+    width: 13rem;
+    flex: 0 0 auto;
+}
+
+/* CAROUSEL STYLES */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.carousel-wrapper {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.cards-experiences {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.carousel-btn {
+    background-color: var(--primary-color);
+    color: var(--letter-color);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+    background-color: var(--letter-color);
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.carousel-btn:disabled {
+    background-color: var(--secondary-color);
+    color: var(--main-bg-color);
+    cursor: not-allowed;
+    opacity: 0.5;
+    transform: scale(1);
+}

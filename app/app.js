@@ -21,19 +21,19 @@ function createAnimation() {
         scale: [0.8, 1.2, 1],
         duration: 1000
     })
-    .add({
-        targets: '.square',
-        translateX: '15rem',
-        rotate: '180deg',
-        scale: [1, 1.3, 1],
-        duration: 800
-    }, '-=200') // Inicia 200ms antes da animação anterior terminar
-    .add({
-        targets: '.circle',
-        translateX: '15rem',
-        scale: [1, 1.5, 1],
-        duration: 600
-    }, '-=500'); // Inicia 500ms antes da animação anterior terminar
+        .add({
+            targets: '.square',
+            translateX: '15rem',
+            rotate: '180deg',
+            scale: [1, 1.3, 1],
+            duration: 800
+        }, '-=200') // Inicia 200ms antes da animação anterior terminar
+        .add({
+            targets: '.circle',
+            translateX: '15rem',
+            scale: [1, 1.5, 1],
+            duration: 600
+        }, '-=500'); // Inicia 500ms antes da animação anterior terminar
 }
 
 /**
@@ -51,7 +51,7 @@ function resetAnimation() {
     if (tl) {
         tl.pause();
     }
-    
+
     // Resetar posições dos elementos
     anime.set(['.triangle', '.square', '.circle'], {
         translateX: 0,
@@ -61,5 +61,41 @@ function resetAnimation() {
 }
 
 window.addEventListener('load', () => {
-    createAnimation(); 
+    createAnimation();
+});
+
+let currentIndex = 0;
+const cardsContainer = document.getElementById('cards-experiences');
+const cards = cardsContainer.querySelectorAll('.card');
+const totalCards = cards.length;
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+function updateCarousel() {
+    const cardWidth = cards[0].offsetWidth + 20; // largura do card + gap
+    const translateX = -currentIndex * cardWidth;
+    cardsContainer.style.transform = `translateX(${translateX}px)`;
+
+    // Atualizar botões
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= totalCards - 1;
+}
+
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+    }
+});
+
+nextBtn.addEventListener('click', () => {
+    if (currentIndex < totalCards - 1) {
+        currentIndex++;
+        updateCarousel();
+    }
+});
+
+// Inicializar
+document.addEventListener('DOMContentLoaded', () => {
+    updateCarousel();
 });
