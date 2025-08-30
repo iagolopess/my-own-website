@@ -1,17 +1,18 @@
-/* Media queries responsivas */
-@media (max-width: 1024px) {
-    .carousel-container {
-        gap: 10px;
-    }
-    
+/* Media queries responsivas - Breakpoints padrão */
+
+/* Mobile First - Base styles aplicam para mobile */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
     .carousel-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
     }
 }
 
-@media (min-width: 767px) {
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
     .section-card {
         margin: 20px 40px;
     }
@@ -36,15 +37,22 @@
     }
 
     .card {
-        width: 18em;
+        width: 15rem;
     }
 
-    .card-body p {
-        font-size: 0.9em;
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+
+    .carousel-container {
+        gap: 15px;
     }
 }
 
-@media (min-width: 1023px) {
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
     .section-card {
         margin: 20px 50px;
     }
@@ -54,7 +62,7 @@
     }
 
     .pic-profile {
-        margin-left: -.5em;
+        margin-left: -0.5em;
         width: 12em;
         height: 12em;
     }
@@ -64,77 +72,95 @@
         font-size: 1.5em;
     }
 
+    .card {
+        width: 20em;
+    }
+
     .carousel-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5em;
+        width: 45px;
+        height: 45px;
+        font-size: 1.4rem;
+    }
+
+    .carousel-container {
+        gap: 20px;
     }
 }
 
-@media (min-width: 1439px) {
-    .carousel-btn {
-        display: none;
-    }
-    
-    .cards-experiences {
-        transform: translateX(0) !important;
-    }
-    
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
     .section-card {
         margin: 20px 75px;
     }
 
     .pic-profile {
-        margin-left: -4.5em;
+        margin-left: -2em;
+        width: 13em;
+        height: 13em;
+    }
+
+    .card {
+        width: 20rem;
+    }
+}
+
+/* XXL devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    /* Esconder botões do carrossel - todos os cards cabem na tela */
+    .carousel-btn {
+        display: none;
+    }
+    
+    /* Resetar posição dos cards para mostrar todos */
+    .cards-experiences {
+        transform: translateX(0) !important;
+    }
+    
+    .section-card {
+        margin: 20px 100px;
+    }
+
+    .pic-profile {
+        margin-left: -4em;
         width: 15em;
         height: 15em;
     }
 
     .card {
-        width: 25rem;
+        width: 16.65em;
     }
 }
 
-@media (min-width: 1528px) {
+/* Ultra wide screens (1600px and up) */
+@media (min-width: 1600px) {
     .section-card {
         margin: 20px 125px;
     }
 
     .pic-profile {
-        margin-left: -12.5em;
+        margin-left: -8em;
         width: 15em;
         height: 15em;
     }
+
+    .card {
+        width: 24rem;
+    }
 }
 
-@media (min-width: 2048px) {
+/* 4K screens (2560px and up) */
+@media (min-width: 2560px) {
     .section-card {
-        margin: 20px 125px;
+        margin: 20px 200px;
     }
 
     .pic-profile {
-        margin-left: -20.5em;
-        width: 15em;
-        height: 15em;
-    }
-}
-
-@media (min-width: 2559px) {
-    .pic-profile {
-        margin-left: -32.5em;
-        width: 15em;
-        height: 15em;
-    }
-}
-
-@media (min-width: 3439px) {
-    .section-card {
-        margin: 20px 205px;
+        margin-left: -40em;
+        width: 16em;
+        height: 16em;
     }
 
-    .pic-profile {
-        margin-left: -50.5em;
-        width: 15em;
-        height: 15em;
+    .text-presentation {
+        font-size: 2em;
     }
 }
